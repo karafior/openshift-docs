@@ -1500,14 +1500,20 @@ advanced install:
 [[advanced-install-cluster-metrics-storage-dynamic]]
 ===== Option A: Dynamic
 
-Use the following variable if your {product-title} environment supports
-xref:../../install_config/persistent_storage/dynamically_provisioning_pvs.adoc#install-config-persistent-storage-dynamically-provisioning-pvs[dynamic volume provisioning] for your cloud provider:
+If your {product-title} environment supports
+xref:../../install_config/persistent_storage/dynamically_provisioning_pvs.adoc#install-config-persistent-storage-dynamically-provisioning-pvs[dynamic volume provisioning]
+for your cloud provider, use the following variable:
 
 ----
 [OSEv3:vars]
 
 openshift_metrics_cassandra_storage_type=dynamic
 ----
+
+Check
+xref:../../install_config/master_node_configuration.adoc#master-node-config-volume-config[Volume
+Configuration] for more information on using `DynamicProvisioningEnabled` to
+enable or disable dynamic provisioning.
 
 [discrete]
 [[advanced-install-cluster-metrics-storage-nfs-host-group]]
@@ -1590,14 +1596,20 @@ advanced install:
 [[advanced-installation-logging-storage-dynamic]]
 ===== Option A: Dynamic
 
-Use the following variable if your {product-title} environment supports
-xref:../../install_config/persistent_storage/dynamically_provisioning_pvs.adoc#install-config-persistent-storage-dynamically-provisioning-pvs[dynamic volume provisioning] for your cloud provider:
+If your {product-title} environment supports
+xref:../../install_config/persistent_storage/dynamically_provisioning_pvs.adoc#install-config-persistent-storage-dynamically-provisioning-pvs[dynamic volume provisioning]
+for your cloud provider, use the following variable:
 
 ----
 [OSEv3:vars]
 
 openshift_logging_es_pvc_dynamic=true
 ----
+
+Check
+xref:../../install_config/master_node_configuration.adoc#master-node-config-volume-config[Volume
+Configuration] for more information on using `DynamicProvisioningEnabled` to
+enable or disable dynamic provisioning.
 
 [discrete]
 [[advanced-installation-logging-storage-nfs-host-group]]
